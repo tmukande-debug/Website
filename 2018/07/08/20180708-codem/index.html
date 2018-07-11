@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="Yupeng&#39;s Blog">
 <meta property="og:description" content="题意$n$ 个点的图，依次添加给出的 $m$ 条有向边。每次添加后，如果图中有环，输出 $0$；否则输出 $1$。$n \le 1e5, m \le 2e6$ 输入第一行两个正整数 $n$ 和 $m$。之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$ 记上一个回答为 $ans$，实际的边为 $(u, v)$则有 $\begin{cases}">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-10T11:00:54.330Z">
+<meta property="og:updated_time" content="2018-07-11T00:55:26.457Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序">
 <meta name="twitter:description" content="题意$n$ 个点的图，依次添加给出的 $m$ 条有向边。每次添加后，如果图中有环，输出 $0$；否则输出 $1$。$n \le 1e5, m \le 2e6$ 输入第一行两个正整数 $n$ 和 $m$。之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$ 记上一个回答为 $ans$，实际的边为 $(u, v)$则有 $\begin{cases}">
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  846
+                  853
                 </span>
               
 
@@ -414,7 +414,7 @@
 <p>记上一个回答为 $ans$，实际的边为 $(u, v)$<br>则有 $\begin{cases}u’ =  (u + ans) \pmod n + 1\\ v’ = (v + ans) \pmod n  + 1\end{cases}$</p>
 <p>最开始的 $ans$ 为 $0$</p>
 <a id="more"></a>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>暂无</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.nowcoder.com/acm/contest/152/B" target="_blank" rel="noopener">CodeM2018复赛 软件包管理器</a></p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>如果加了某条边后，图中出现环，那么这条边及以后的 $ans$ 应全为 $0$。<br>因此题意即为找到 $ans$ 序列的 $1$ 和 $0$ 的分界线。</p>
 <p>考虑二分答案，每次判断 $1 \to mid$ 的边构成的图是否为 DAG。<br>如果对 $1 \to mid$ 的边建成的图可以做拓扑排序，则是 DAG；否则说明必有环。</p>
 <p>由于拓扑排序时间复杂度 $O(n)$，总时间复杂度 $O(n\log{m})$。</p>
