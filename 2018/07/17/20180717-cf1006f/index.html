@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="组合数学," />
+  <meta name="keywords" content="双向bfs," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="题意Leha 想开车去 Saratov，这段旅途看作 $0$ 到 $n$ 的一维直线。如果 Leha 从起点出发或者从休息点出发，连续驾驶 $k$ 千米，则需要消耗的体能为 $a_1 + a_2 + \ldots + a_k$。每个整点 $t, (1 \le t &amp;lt; n)$ 都可能拥有一个休息点，每个休息点存在或不存在的概率相等。记 Leha 整个旅程消耗的体能的期望为 $p$，求 $p\c">
-<meta name="keywords" content="组合数学">
+<meta name="description" content="题意给定 $n \times m$ 的矩阵，以及一个整数 $k$。定义路径为，从 $(1,1)$ 出发，只能向右 / 下方走，到达 $(n, m)$ 的行走方案。定义路径的权重为，路径经过的整数的 $xor$ 之和。求权重为 $k$ 的路径的条数。">
+<meta name="keywords" content="双向bfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「Codeforces 1009E」Intercity Travelling - 组合数学">
-<meta property="og:url" content="http://yoursite.com/2018/07/16/20180716-cf1009e/index.html">
+<meta property="og:title" content="「Codeforces 1006F」Xor-Paths - 双向bfs">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/20180717-cf1006f/index.html">
 <meta property="og:site_name" content="hyp1231&#39;s Blog">
-<meta property="og:description" content="题意Leha 想开车去 Saratov，这段旅途看作 $0$ 到 $n$ 的一维直线。如果 Leha 从起点出发或者从休息点出发，连续驾驶 $k$ 千米，则需要消耗的体能为 $a_1 + a_2 + \ldots + a_k$。每个整点 $t, (1 \le t &amp;lt; n)$ 都可能拥有一个休息点，每个休息点存在或不存在的概率相等。记 Leha 整个旅程消耗的体能的期望为 $p$，求 $p\c">
+<meta property="og:description" content="题意给定 $n \times m$ 的矩阵，以及一个整数 $k$。定义路径为，从 $(1,1)$ 出发，只能向右 / 下方走，到达 $(n, m)$ 的行走方案。定义路径的权重为，路径经过的整数的 $xor$ 之和。求权重为 $k$ 的路径的条数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T02:46:12.082Z">
+<meta property="og:updated_time" content="2018-07-17T06:18:06.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「Codeforces 1009E」Intercity Travelling - 组合数学">
-<meta name="twitter:description" content="题意Leha 想开车去 Saratov，这段旅途看作 $0$ 到 $n$ 的一维直线。如果 Leha 从起点出发或者从休息点出发，连续驾驶 $k$ 千米，则需要消耗的体能为 $a_1 + a_2 + \ldots + a_k$。每个整点 $t, (1 \le t &amp;lt; n)$ 都可能拥有一个休息点，每个休息点存在或不存在的概率相等。记 Leha 整个旅程消耗的体能的期望为 $p$，求 $p\c">
+<meta name="twitter:title" content="「Codeforces 1006F」Xor-Paths - 双向bfs">
+<meta name="twitter:description" content="题意给定 $n \times m$ 的矩阵，以及一个整数 $k$。定义路径为，从 $(1,1)$ 出发，只能向右 / 下方走，到达 $(n, m)$ 的行走方案。定义路径的权重为，路径经过的整数的 $xor$ 之和。求权重为 $k$ 的路径的条数。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/16/20180716-cf1009e/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/20180717-cf1006f/"/>
 
 
 
 
 
-  <title>「Codeforces 1009E」Intercity Travelling - 组合数学 | hyp1231's Blog</title>
+  <title>「Codeforces 1006F」Xor-Paths - 双向bfs | hyp1231's Blog</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/16/20180716-cf1009e/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/20180717-cf1006f/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hyp1231">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「Codeforces 1009E」Intercity Travelling - 组合数学</h1>
+          <h1 class="post-title" itemprop="name headline">「Codeforces 1006F」Xor-Paths - 双向bfs</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-16T08:55:28+08:00">
-                2018-07-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T13:46:33+08:00">
+                2018-07-17
               </time>
             
 
@@ -347,7 +347,7 @@
 
           
           
-             <span id="/2018/07/16/20180716-cf1009e/" class="leancloud_visitors" data-flag-title="「Codeforces 1009E」Intercity Travelling - 组合数学">
+             <span id="/2018/07/17/20180717-cf1006f/" class="leancloud_visitors" data-flag-title="「Codeforces 1006F」Xor-Paths - 双向bfs">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  584
+                  892
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -409,16 +409,15 @@
       
 
       
-        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>Leha 想开车去 Saratov，这段旅途看作 $0$ 到 $n$ 的一维直线。<br>如果 Leha 从起点出发或者从休息点出发，连续驾驶 $k$ 千米，则需要消耗的体能为 $a_1 + a_2 + \ldots + a_k$。<br>每个整点 $t, (1 \le t &lt; n)$ 都可能拥有一个休息点，每个休息点存在或不存在的概率相等。<br>记 Leha 整个旅程消耗的体能的期望为 $p$，求 $p\cdot 2^{n - 1}$。</p>
+        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定 $n \times m$ 的矩阵，以及一个整数 $k$。<br>定义路径为，从 $(1,1)$ 出发，只能向右 / 下方走，到达 $(n, m)$ 的行走方案。<br>定义路径的权重为，路径经过的整数的 $xor$ 之和。<br>求权重为 $k$ 的路径的条数。</p>
 <a id="more"></a>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://codeforces.com/problemset/problem/1009/E" target="_blank" rel="noopener">Codeforces 1009E</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>旅途中共有 $n - 1$ 个整点，故有 $2^{n - 1}$ 种可能的休息点摆放方案，故 $p\cdot 2^{n - 1}$ 为所有可能情况消耗体能之和。</p>
-<p>我们先考虑总和中的 $a_1$ 的数量。由于每个休息点之后紧邻的 $1km$ 路程一定消耗 $a_1$ 的体能，因此某种摆放方案中 $a_1$ 的数量等于休息点个数加一（起点之后一定消耗 $a_1$）。考虑有 $j$ 个休息点时，有 $C_{n-1}^{j}$ 种摆放方案，故 $j$ 个休息点的情况下 $a_1$ 的数量和为 $(j + 1)C_{n-1}^j$。</p>
-<p>记 $N_1$ 为所有摆放方案下 $a_1$ 的数量和，则有<br>$$<br>N_1 = \sum \limits_{i = 1}^{n} i \cdot C_{n-1}^{i-1}<br>$$<br>即 $N_1 = 1 \cdot C_{n-1}^{0} + 2 \cdot C_{n - 1}^{1} + \ldots + n \cdot C_{n-1}^{n-1}$</p>
-<p>又由于 $C_{n -1}^{i} = C_{n - 1}^{n-1 -i}$，有 $N_1 = 1 \cdot C_{n-1}^{n-1} + 2 \cdot C_{n - 1}^{n-2} + \ldots + n \cdot C_{n-1}^{0}$</p>
-<p>两式加和，有 $2 N_1 = (n + 1)\sum\limits_{i = 1}^{n}C_{n-1}^{i-1} = (n+1)\cdot 2^{n-1}$，即 $N_1 = (n + 1) \cdot 2^{n - 2}$</p>
-<p>同理，有 $N_i = (n + 2 - i)\cdot 2^{n-1 - i}$，则<br>$$<br>p\cdot 2^{n - 1} = \sum\limits_{i=1}^{n} N_ia_i = \sum\limits_{i = 1} ^n (n + 2 - i) \cdot 2 ^{n - 1 - i} \cdot a_i<br>$$</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="built_in">std</span>::iostream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1000010</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">LL a[N], p[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::sync_with_stdio(<span class="literal">false</span>), <span class="built_in">cin</span>.tie(<span class="number">0</span>), <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    p[<span class="number">0</span>] = <span class="number">1</span>; p[<span class="number">1</span>] = <span class="number">3</span>;</span><br><span class="line">    LL m = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; ++i) &#123;   <span class="comment">// 预处理系数，即 Ni</span></span><br><span class="line">        m = (m &lt;&lt; <span class="number">1</span>) % mod;         <span class="comment">// 2^(i - 1)</span></span><br><span class="line">        p[i] = (m * (i + <span class="number">2</span>)) % mod; <span class="comment">// (i + 2) * 2^(i - 1)</span></span><br><span class="line">    &#125;</span><br><span class="line">    LL sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        sum = (sum + p[n - i - <span class="number">1</span>] * a[i]) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; sum &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://codeforces.com/problemset/problem/1006/F" target="_blank" rel="noopener">Codeforces 1006F</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>定义从路径一端到 $(x,y)$ 的某条路径上的整数的 $xor$ 之和为 $(x,y)$ 处的<strong>状态</strong>。</p>
+<p>由于 $n$ 和 $m$ 的范围均为 $20$ 之内，考虑暴力搜索。对于每个位置，之后都有两种状态转移（向下 / 向右）。因此我们将矩阵按照 $m + n$ 的值进行分层，如果从起点开始 $bfs$，易知每次状态转移使层数加一，每一层的状态数不超过上一层的二倍，故直接 $bfs$ 的状态数不超过 $2 ^ {m+ n}$ ，但这个量级是我们不能接受的。</p>
+<p>而考虑起点和终点的值都是唯一且确定的，我们可以从起点和终点同时采用 $bfs$。因此我们规定 $\frac{m + n}{2}$ 为中心层，两个 $bfs$ 一到中心层则停止搜索，这样在中心层，如果有重合的状态则说明有合法路径。</p>
+<p>为了记录合法路径的数目，我们需要记录某一个 $bfs$ （这里不妨设为从起点出发的）到达状态 $val$ 的路径数。在实现上，我们使用 $STL$ 库中的 $map$，形成状态到路径数的映射。这样先实现从起点出发的 $bfs$，得到中间层每个位置各个状态的路径数；再做另一个 $bfs$，对于每个到中间层的状态，把第一个 $bfs$ 中计算出的该状态对应的路径数加到总的 $ans$ 中。</p>
+<p>这样搜索到中间层的状态数不超过 $2^{\frac{m+n}{2}}$，$map$ 的复杂度 $O(\log {2^{\frac{m+n}{2}}}) = O(\frac{m+ n}{2}\log 2) = O(\frac{m + n}{2})$，总复杂度 $O(\frac{m+n}{2} \cdot 2^{\frac{m+n}{2}})$ 。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">State</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">    LL val;</span><br><span class="line">    State(<span class="keyword">int</span> x = <span class="number">0</span>, <span class="keyword">int</span> y = <span class="number">0</span>, LL val = <span class="number">0</span>) : x(x), y(y), val(val) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, mid;</span><br><span class="line">LL a[N][N], k;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 记录中间层 状态-&gt;路径数 的映射</span></span><br><span class="line"><span class="comment">// 由于 x + y = (n + m) / 2，我们确定了 x 即可确定 y</span></span><br><span class="line"><span class="comment">// 因此 res[x][st] 代表中间层横坐标为 x 的点，状态为 st 的路径数目</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">map</span>&lt;LL, <span class="keyword">int</span>&gt; res[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>), <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>), <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    mid = (n + m - <span class="number">2</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; m; ++j) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">queue</span>&lt;State&gt; que1, que2;</span><br><span class="line">    que1.push(State(<span class="number">0</span>, <span class="number">0</span>, a[<span class="number">0</span>][<span class="number">0</span>]));</span><br><span class="line">    <span class="keyword">while</span> (!que1.empty()) &#123;</span><br><span class="line">        State tmp = que1.front(); que1.pop();</span><br><span class="line">        <span class="keyword">int</span> x = tmp.x, y = tmp.y;</span><br><span class="line">        LL val = tmp.val;</span><br><span class="line">        <span class="keyword">if</span> (x + y == mid) &#123; <span class="comment">// 到达中心线</span></span><br><span class="line">            <span class="keyword">if</span> (res[x].count(val)) &#123;</span><br><span class="line">                ++res[x][val];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res[x][val] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (x + <span class="number">1</span> != n) que1.push(State(x + <span class="number">1</span>, y, val ^ a[x + <span class="number">1</span>][y]));</span><br><span class="line">            <span class="keyword">if</span> (y + <span class="number">1</span> != m) que1.push(State(x, y + <span class="number">1</span>, val ^ a[x][y + <span class="number">1</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    que2.push(State(n - <span class="number">1</span>, m - <span class="number">1</span>, k));</span><br><span class="line">    <span class="keyword">while</span> (!que2.empty()) &#123;</span><br><span class="line">        State tmp = que2.front(); que2.pop();</span><br><span class="line">        <span class="keyword">int</span> x = tmp.x, y = tmp.y;</span><br><span class="line">        LL val = tmp.val;</span><br><span class="line">        <span class="keyword">if</span> (x + y == mid) &#123;</span><br><span class="line">            ans += res[x][val];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (x - <span class="number">1</span> &gt;= <span class="number">0</span>) que2.push(State(x - <span class="number">1</span>, y, val ^ a[x][y]));</span><br><span class="line">            <span class="keyword">if</span> (y - <span class="number">1</span> &gt;= <span class="number">0</span>) que2.push(State(x, y - <span class="number">1</span>, val ^ a[x][y]));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -436,7 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/组合数学/" rel="tag"><i class="fa fa-tag"></i> 组合数学</a>
+            <a href="/tags/双向bfs/" rel="tag"><i class="fa fa-tag"></i> 双向bfs</a>
           
         </div>
       
@@ -464,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/10/20180710-hdu5677/" rel="next" title="「HDU 5677」 ztr loves substring - Manacher + 多重背包">
-                <i class="fa fa-chevron-left"></i> 「HDU 5677」 ztr loves substring - Manacher + 多重背包
+              <a href="/2018/07/16/20180716-cf1009e/" rel="next" title="「Codeforces 1009E」Intercity Travelling - 组合数学">
+                <i class="fa fa-chevron-left"></i> 「Codeforces 1009E」Intercity Travelling - 组合数学
               </a>
             
           </div>
@@ -473,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/17/20180717-cf1006f/" rel="prev" title="「Codeforces 1006F」Xor-Paths - 双向bfs">
-                「Codeforces 1006F」Xor-Paths - 双向bfs <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
