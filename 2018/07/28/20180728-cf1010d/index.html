@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="hyp1231&#39;s Blog">
 <meta property="og:description" content="题意给出一个以 $1$ 为根的有 $n$ 个节点的树，树的每个节点表示一个输入，或者一个逻辑关系。每个逻辑关系根据儿子节点的值，套入逻辑关系式，计算出当前节点的值。现在让你求出，只改变任一个输入节点的值，根节点的取值。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-28T09:16:41.490Z">
+<meta property="og:updated_time" content="2018-07-28T09:20:55.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「Codeforces 1010D」Mars rover - dfs">
 <meta name="twitter:description" content="题意给出一个以 $1$ 为根的有 $n$ 个节点的树，树的每个节点表示一个输入，或者一个逻辑关系。每个逻辑关系根据儿子节点的值，套入逻辑关系式，计算出当前节点的值。现在让你求出，只改变任一个输入节点的值，根节点的取值。">
@@ -412,7 +412,7 @@
         <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给出一个以 $1$ 为根的有 $n$ 个节点的树，树的每个节点表示一个输入，或者一个逻辑关系。每个逻辑关系根据儿子节点的值，套入逻辑关系式，计算出当前节点的值。<br>现在让你求出，只改变任一个输入节点的值，根节点的取值。</p>
 <a id="more"></a>
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://codeforces.com/problemset/problem/1010/D" target="_blank" rel="noopener">Codeforces 1010D</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>首先我们可以规定一个结构体 $State$，定义如下：</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>首先我们可以规定一个结构体 <code>State</code>，定义如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">State</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">4</span>];      <span class="comment">// 代表逻辑关系（或输入）的字符串</span></span><br><span class="line">    <span class="keyword">int</span> next[<span class="number">2</span>];    <span class="comment">// 儿子节点标号</span></span><br><span class="line">    State() &#123;</span><br><span class="line">        <span class="built_in">memset</span>(s, <span class="number">0</span>, <span class="keyword">sizeof</span>(s));</span><br><span class="line">        next[<span class="number">0</span>] = next[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>当逻辑关系为 $AND, OR, XOR$ 时，<code>next[0]</code> 代表左儿子，<code>next[1]</code> 代表右儿子。<br>当逻辑关系为 $NOT$ 时，<code>next[0]</code> 代表儿子。<br>当表示输入 $IN$ 时，<code>next[0]</code> 代表输入的值（$0$ 或 $1$）。</p>
 <p>我们可以一次 $dfs$ 求出每个节点的值，把它们记录在 <code>ori[N]</code> 数组中。</p>
