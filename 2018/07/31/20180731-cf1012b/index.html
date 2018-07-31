@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="二分答案,二分,拓扑排序," />
+  <meta name="keywords" content="并查集," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="题意$n$ 个点的图，依次添加给出的 $m$ 条有向边。每次添加后，如果图中有环，输出 $0$；否则输出 $1$。$n \le 1e5, m \le 2e6$ 输入第一行两个正整数 $n$ 和 $m$。之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$ 记上一个回答为 $ans$，实际的边为 $(u, v)$则有 $\begin{cases}">
-<meta name="keywords" content="二分答案,二分,拓扑排序">
+<meta name="description" content="题意给定一个 $n \times m$ 的矩阵，其中 $q$ 个位置已经被填充。有一条规则，如果 $(r_1, c_1)$ ，$(r_1, c_2)$，$(r_2, c_1)$ 均被填充，则 $(r_2, c_2)$ 也被填充。任何被其他三个位置生成的位置，也可以继续生成其他位置。问最少需要再人为填充多少元素，使矩阵被填满。">
+<meta name="keywords" content="并查集">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序">
-<meta property="og:url" content="http://yoursite.com/2018/07/08/20180708-codem/index.html">
+<meta property="og:title" content="「Codeforces 1012B」Chemical table - 并查集">
+<meta property="og:url" content="http://yoursite.com/2018/07/31/20180731-cf1012b/index.html">
 <meta property="og:site_name" content="hyp1231&#39;s Blog">
-<meta property="og:description" content="题意$n$ 个点的图，依次添加给出的 $m$ 条有向边。每次添加后，如果图中有环，输出 $0$；否则输出 $1$。$n \le 1e5, m \le 2e6$ 输入第一行两个正整数 $n$ 和 $m$。之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$ 记上一个回答为 $ans$，实际的边为 $(u, v)$则有 $\begin{cases}">
+<meta property="og:description" content="题意给定一个 $n \times m$ 的矩阵，其中 $q$ 个位置已经被填充。有一条规则，如果 $(r_1, c_1)$ ，$(r_1, c_2)$，$(r_2, c_1)$ 均被填充，则 $(r_2, c_2)$ 也被填充。任何被其他三个位置生成的位置，也可以继续生成其他位置。问最少需要再人为填充多少元素，使矩阵被填满。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-28T09:17:58.384Z">
+<meta property="og:updated_time" content="2018-07-31T00:34:17.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序">
-<meta name="twitter:description" content="题意$n$ 个点的图，依次添加给出的 $m$ 条有向边。每次添加后，如果图中有环，输出 $0$；否则输出 $1$。$n \le 1e5, m \le 2e6$ 输入第一行两个正整数 $n$ 和 $m$。之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$ 记上一个回答为 $ans$，实际的边为 $(u, v)$则有 $\begin{cases}">
+<meta name="twitter:title" content="「Codeforces 1012B」Chemical table - 并查集">
+<meta name="twitter:description" content="题意给定一个 $n \times m$ 的矩阵，其中 $q$ 个位置已经被填充。有一条规则，如果 $(r_1, c_1)$ ，$(r_1, c_2)$，$(r_2, c_1)$ 均被填充，则 $(r_2, c_2)$ 也被填充。任何被其他三个位置生成的位置，也可以继续生成其他位置。问最少需要再人为填充多少元素，使矩阵被填满。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/08/20180708-codem/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/31/20180731-cf1012b/"/>
 
 
 
 
 
-  <title>「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序 | hyp1231's Blog</title>
+  <title>「Codeforces 1012B」Chemical table - 并查集 | hyp1231's Blog</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/08/20180708-codem/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/20180731-cf1012b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hyp1231">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序</h1>
+          <h1 class="post-title" itemprop="name headline">「Codeforces 1012B」Chemical table - 并查集</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-08T15:50:26+08:00">
-                2018-07-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T07:59:45+08:00">
+                2018-07-31
               </time>
             
 
@@ -347,7 +347,7 @@
 
           
           
-             <span id="/2018/07/08/20180708-codem/" class="leancloud_visitors" data-flag-title="「CodeM2018复赛」 软件包管理器 - 二分答案 + 拓扑排序">
+             <span id="/2018/07/31/20180731-cf1012b/" class="leancloud_visitors" data-flag-title="「Codeforces 1012B」Chemical table - 并查集">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  853
+                  655
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -409,17 +409,20 @@
       
 
       
-        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>$n$ 个点的图，依次添加给出的 $m$ 条有向边。<br>每次添加后，如果图中有环，输出 $0$；否则输出 $1$。<br>$n \le 1e5, m \le 2e6$</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>第一行两个正整数 $n$ 和 $m$。<br>之后 $m$ 行，每行两个正整数 $(u’, v’)$ 表示加密后的边，保证 $u’ \not = v’$</p>
-<p>记上一个回答为 $ans$，实际的边为 $(u, v)$<br>则有 $\begin{cases}u’ =  (u + ans) \pmod n + 1\\ v’ = (v + ans) \pmod n  + 1\end{cases}$</p>
-<p>最开始的 $ans$ 为 $0$</p>
+        <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给定一个 $n \times m$ 的矩阵，其中 $q$ 个位置已经被填充。<br>有一条规则，如果 $(r_1, c_1)$ ，$(r_1, c_2)$，$(r_2, c_1)$ 均被填充，则 $(r_2, c_2)$ 也被填充。任何被其他三个位置生成的位置，也可以继续生成其他位置。问最少需要再人为填充多少元素，使矩阵被填满。</p>
 <a id="more"></a>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.nowcoder.com/acm/contest/152/B" target="_blank" rel="noopener">CodeM2018复赛 软件包管理器</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>如果加了某条边后，图中出现环，那么这条边及以后的 $ans$ 应全为 $0$。<br>因此题意即为找到 $ans$ 序列的 $1$ 和 $0$ 的分界线。</p>
-<p>考虑二分答案，每次判断 $1 \to mid$ 的边构成的图是否为 DAG。<br>如果对 $1 \to mid$ 的边建成的图可以做拓扑排序，则是 DAG；否则说明必有环。</p>
-<p>由于拓扑排序时间复杂度 $O(n)$，总时间复杂度 $O(n\log{m})$。</p>
-<div class="note warning"><p>Hint: 我们可以在读入数据的时候预处理出解密后的 $(u, v)$：<br>​    如果上一个 $ans$ 是 $0$，则 $u = (u’-1+n) \% n$ ；<br>​    否则，$u = (u’ - 2 + n) \% n$。$v$ 同理。</p></div>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">E</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> u, v;</span><br><span class="line">    E(<span class="keyword">int</span> u = <span class="number">0</span>, <span class="keyword">int</span> v = <span class="number">0</span>) : u(u), v(v) &#123;&#125;</span><br><span class="line">&#125; pre_0[N &lt;&lt; <span class="number">1</span>], pre_1[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"><span class="comment">// 如果上一个 ans 是 0，实际的边为 pre_0[i]；否则是 pre_1[i]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"><span class="keyword">bool</span> vis[N];</span><br><span class="line"><span class="keyword">int</span> degree[N];      <span class="comment">// 节点度数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> e_id, head[N];  <span class="comment">// e_id 记录边数</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> u, v, next;</span><br><span class="line">    Edge(<span class="keyword">int</span> u = <span class="number">0</span>, <span class="keyword">int</span> v = <span class="number">0</span>, <span class="keyword">int</span> next = <span class="number">0</span>) :u(u), v(v), next(next) &#123;&#125;</span><br><span class="line">&#125; e[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    e[++e_id].v = b;</span><br><span class="line">    e[e_id].u = a;</span><br><span class="line">    e[e_id].next = head[a];</span><br><span class="line">    head[a] = e_id;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(head, <span class="number">0</span>, <span class="keyword">sizeof</span>(head));</span><br><span class="line">    e_id = <span class="number">0</span>;</span><br><span class="line">    addedge(pre_0[<span class="number">0</span>].u, pre_0[<span class="number">0</span>].v);    <span class="comment">// 初始 ans 为 0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= id; ++i) &#123;      <span class="comment">// 假设前 id 条边构成 DAG</span></span><br><span class="line">        <span class="keyword">int</span> u = pre_1[i].u, v = pre_1[i].v;</span><br><span class="line">        addedge(u, v);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">topo</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">    build(id);  <span class="comment">// 建图</span></span><br><span class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="built_in">memset</span>(degree, <span class="number">0</span>, <span class="keyword">sizeof</span>(degree));</span><br><span class="line">    ++degree[pre_0[<span class="number">0</span>].v];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= id; ++i)</span><br><span class="line">        ++degree[pre_1[i].v];</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; que;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</span><br><span class="line">        <span class="keyword">if</span> (degree[i] == <span class="number">0</span>) &#123;</span><br><span class="line">            que.push(i);</span><br><span class="line">            vis[i] = <span class="literal">true</span>;</span><br><span class="line">            ++cnt;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">while</span> (!que.empty()) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = que.front(); que.pop();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = head[u]; i; i = e[i].next) &#123;</span><br><span class="line">            <span class="keyword">int</span> v = e[i].v;</span><br><span class="line">            <span class="keyword">if</span> (vis[v])<span class="keyword">continue</span>;</span><br><span class="line">            --degree[v];</span><br><span class="line">            <span class="keyword">if</span> (degree[v] == <span class="number">0</span>) &#123;</span><br><span class="line">                que.push(v);</span><br><span class="line">                vis[v] = <span class="literal">true</span>;</span><br><span class="line">                ++cnt;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt == n;</span><br><span class="line">&#125;   <span class="comment">// 如果拓扑有序，返回 true，O(n)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) <span class="keyword">return</span> l;</span><br><span class="line">    <span class="keyword">int</span> mid = (l + r + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (topo(mid)) <span class="keyword">return</span> solve(mid, r);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> solve(l, mid - <span class="number">1</span>);</span><br><span class="line">&#125;   <span class="comment">// 二分，返回最大的可以构成 DAG 的边数，即 [1, id] 可以构成 DAG，但 [1, id + 1] 不可以</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">int</span> u, v;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;u, &amp;v);</span><br><span class="line">        --u; --v;</span><br><span class="line">        <span class="keyword">if</span> (u == <span class="number">0</span>) u = n;</span><br><span class="line">        <span class="keyword">if</span> (v == <span class="number">0</span>) v = n;  <span class="comment">// 取模</span></span><br><span class="line">        pre_0[i].u = u;</span><br><span class="line">        pre_0[i].v = v;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> u = pre_0[i].u - <span class="number">1</span>, v = pre_0[i].v - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (u == <span class="number">0</span>) u = n;</span><br><span class="line">        <span class="keyword">if</span> (v == <span class="number">0</span>) v = n;</span><br><span class="line">        pre_1[i].u = u;</span><br><span class="line">        pre_1[i].v = v;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> k = solve(<span class="number">0</span>, m - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, (i &lt;= k));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://codeforces.com/problemset/problem/1012/B" target="_blank" rel="noopener">Codeforces 1012B</a></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>我们考虑自动填充的规则，又三个点自动生成第四个点。如果 $(r_1, c_1)$ ，$(r_1, c_2)$，$(r_2, c_1)$ 均被填充，则可以看成：</p>
+<ol>
+<li>$(r_1, c_1)$：$r_1$ 和 $c_1$ 被联系起来</li>
+<li>$(r_1,c_2)$：$r_1$ 和 $c_2$ 被联系起来</li>
+<li>由 $1, 2 \to$ $c_1$ 和 $c_2$ 被联系起来</li>
+<li>$(r_2, c_1)$：$r_2$ 和 $c_1$ 被联系起来</li>
+<li>由 $3, 4 \to$ $r_2$ 和 $c_2$ 被联系起来，即有 $(r_2, c_2)$ 被填充 </li>
+</ol>
+<p>这两个模型是等价的。至此，我们把每个边的标号和每个列的标号都看成抽象图中的点，每个给出的点 $(r, c)$ 看成一个关于点 $r$ 和点 $c$ 属于同一集合的声明。故我们可以使用并查集维护，计算出当前矩阵中独立集合的数量 $N$。</p>
+<p>考虑需要人工合并的次数（即认为填充元素的数目）。考虑当前矩阵中未被填充的点，人工填充这个点一定可以实现两个集合的合并，总集合数即减 $1$。每次人工填充后均自动填充所有可以被自动填充的点。故 $N-1$ 次人工填充后，将全部属于一个集合，矩阵被填满，所以原题的答案即为 $N-1$。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">200010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, q;</span><br><span class="line"><span class="keyword">int</span> pre[N &lt;&lt; <span class="number">1</span>], rank[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"><span class="keyword">bool</span> vis[N &lt;&lt; <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x == pre[x] ? x : pre[x] = find(pre[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> rx = find(x), ry = find(y);</span><br><span class="line">    <span class="keyword">if</span> (rx != ry) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rank[rx] == rank[ry]) &#123;</span><br><span class="line">            pre[ry] = rx;</span><br><span class="line">            rank[rx]++;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(rank[rx] &lt; rank[ry]) &#123;</span><br><span class="line">            pre[rx] = ry;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            pre[ry] = rx;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>), <span class="built_in">std</span>::<span class="built_in">cin</span>.tie(<span class="number">0</span>), <span class="built_in">std</span>::<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m + n; ++i) &#123;</span><br><span class="line">        pre[i] = i;</span><br><span class="line">    &#125;   <span class="comment">// 初始化并查集</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> r, c;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; ++i) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; r &gt;&gt; c;</span><br><span class="line">        c += n;     <span class="comment">// 列的编号: 1 + n ~ m + n</span></span><br><span class="line">        merge(r, c);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m + n; ++i) &#123;</span><br><span class="line">        <span class="keyword">int</span> root = find(i);</span><br><span class="line">        <span class="keyword">if</span> (!vis[root]) &#123;</span><br><span class="line">            vis[root] = <span class="literal">true</span>;</span><br><span class="line">            ++ans;  <span class="comment">// 找到新的连通块</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; ans - <span class="number">1</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -437,11 +440,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/二分答案/" rel="tag"><i class="fa fa-tag"></i> 二分答案</a>
-          
-            <a href="/tags/二分/" rel="tag"><i class="fa fa-tag"></i> 二分</a>
-          
-            <a href="/tags/拓扑排序/" rel="tag"><i class="fa fa-tag"></i> 拓扑排序</a>
+            <a href="/tags/并查集/" rel="tag"><i class="fa fa-tag"></i> 并查集</a>
           
         </div>
       
@@ -469,8 +468,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/20/20180620-HelloWorld/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/07/28/20180728-cf1010d/" rel="next" title="「Codeforces 1010D」Mars rover - dfs">
+                <i class="fa fa-chevron-left"></i> 「Codeforces 1010D」Mars rover - dfs
               </a>
             
           </div>
@@ -478,10 +477,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/10/20180710-hdu5677/" rel="prev" title="「HDU 5677」 ztr loves substring - Manacher + 多重背包">
-                「HDU 5677」 ztr loves substring - Manacher + 多重背包 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -645,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入"><span class="nav-number">1.1.</span> <span class="nav-text">输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">2.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">3.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">2.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题解"><span class="nav-number">3.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
