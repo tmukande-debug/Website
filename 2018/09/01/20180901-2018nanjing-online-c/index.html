@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="hyp1231&#39;s Blog">
 <meta property="og:description" content="题意$n$ 个人玩纸牌游戏，牌堆里初始有 $m$ 张牌。开始每人一次性从牌堆顶抓五张牌。大家依次出牌，直到有一人手中无牌，此人获胜。 游戏流程为：  牌的大小顺序为 $ [ 3, 4, \ldots , 12, 13, 1, 2 ] $，从小到大。 第一个人出他手中最小的牌。 每个人要出上一张牌的下一个顺序的牌，如上一张出了 $13$，这张就要出 $1$。 当上一张牌不是 $2$ 的时候，可以出">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-01T14:26:23.489Z">
+<meta property="og:updated_time" content="2018-09-02T03:43:47.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「ACM-ICPC 2018 南京站网络赛 C 题」GDY - 模拟">
 <meta name="twitter:description" content="题意$n$ 个人玩纸牌游戏，牌堆里初始有 $m$ 张牌。开始每人一次性从牌堆顶抓五张牌。大家依次出牌，直到有一人手中无牌，此人获胜。 游戏流程为：  牌的大小顺序为 $ [ 3, 4, \ldots , 12, 13, 1, 2 ] $，从小到大。 第一个人出他手中最小的牌。 每个人要出上一张牌的下一个顺序的牌，如上一张出了 $13$，这张就要出 $1$。 当上一张牌不是 $2$ 的时候，可以出">
@@ -428,7 +428,7 @@
 <p>数组 <code>stack[]</code> 记录牌堆情况，<code>top</code> 为栈顶指针，当 <code>top == m</code> 时牌堆为空。</p>
 <p>抽象出函数 <code>int find_min(int id)</code> ，输入玩家 $id$，返回玩家手中最小的牌。</p>
 <p>抽象函数 <code>void draw(int id)</code> 表示从玩家 $id$ 开始，轮流抓一张牌。注意控制牌堆剩余数量，当牌堆为空时不进行抓牌操作。</p>
-<p>在游戏主过程中，记录上一次出的牌，以及上一个出牌的人。值得注意的是，在下面三种情况下，都会出现轮圈转牌的情况（<code>draw</code> 函数）：记 $next$ 表示恰好比上一张牌大的牌。</p>
+<p>在游戏主过程中，记录上一次出的牌，以及上一个出牌的人。值得注意的是，在下面三种情况下，都会出现轮圈抓牌的情况（<code>draw</code> 函数）：记 $next$ 表示恰好比上一张牌大的牌。</p>
 <ol>
 <li>一圈无人出牌。</li>
 <li>$next$ 为 $2$。</li>
@@ -580,7 +580,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -602,7 +602,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -700,7 +700,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.6k</span>
+    <span title="Site words total count">10.5k</span>
   
 </div>
 
