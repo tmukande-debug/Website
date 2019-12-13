@@ -127,7 +127,7 @@ a:hover, a:active, a:focus {
 }
 
 #about, #work,
-#contact {
+#tail {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -142,7 +142,7 @@ a:hover, a:active, a:focus {
   border-bottom: 1px solid #f0f0f0;
 }
 
-#contact {
+#tail {
   text-align: center;
 }
 
@@ -521,14 +521,14 @@ a:hover, a:active, a:focus {
 }
 
 /*---------------------------------------
-  Contact section              
+  tail section              
 -----------------------------------------*/
 
-#contact {
+#tail {
   border-top: 1px solid #f0f0f0;
 }
 
-#contact .form-control {
+#tail .form-control {
   border-radius: 0px;
   border-color: #f0f0f0;
   box-shadow: none;
@@ -539,11 +539,11 @@ a:hover, a:active, a:focus {
   transition: all ease-in-out 0.4s;
 }
 
-#contact .form-control:focus {
+#tail .form-control:focus {
   border-bottom: 2px solid #999999;
 }
 /* 
-#contact button#submit {
+#tail button#submit {
   background: #000000;
   border: none;
   border-radius: 50px;
@@ -554,7 +554,7 @@ a:hover, a:active, a:focus {
   margin-top: 24px;
 } */
 /* 
-#contact button#submit:hover {
+#tail button#submit:hover {
   background: #d7b065;
   color: #ffffff;
 } */
