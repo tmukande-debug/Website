@@ -486,16 +486,16 @@ a:hover, a:active, a:focus {
 }
 
 /*----------------------------------------
-  Awards section
+  Award section
 ------------------------------------------*/
 
-#awards {
+#award {
   border-top: 1px solid #f0f0f0;
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-#awards .awards-thumb {
+#award .award-thumb {
   border-radius: 5px;
   margin-bottom: 15px;
   padding: 0;
@@ -506,17 +506,53 @@ a:hover, a:active, a:focus {
   transition: all ease-in-out 0.4s;
 }
 
-#awards .awards-thumb:hover {
+#award .award-thumb:hover {
   background: #ffffff;
   box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
   top: -5px;
 }
 
-#awards .awards-thumb img {
+#award .award-thumb img {
   border-radius: 5px;
 }
 
-#awards ul {
+#award ul {
+  font-size: 1.2em;
+}
+
+
+/*----------------------------------------
+  Others section
+------------------------------------------*/
+
+#others {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#others .others-thumb {
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+#others .others-thumb:hover {
+  background: #ffffff;
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+  top: -5px;
+}
+
+#others .others-thumb img {
+  border-radius: 5px;
+}
+
+#others ul {
   font-size: 1.2em;
 }
 
