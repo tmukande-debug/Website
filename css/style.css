@@ -332,87 +332,12 @@ a:hover, a:active, a:focus {
 }
 
 /*---------------------------------------
-  About section              
+  Publication section              
 -----------------------------------------*/
-/* 
-#about .section-title {
-  padding-bottom: 16px;
+
+#publication p {
+  color: #000000;
 }
-
-#about .col-md-4 a {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  margin: 6px 6px 0px 0;
-}
-
-#about .about-thumb {
-  margin-top: 22px;
-}
-
-#about .about-thumb strong {
-  font-weight: normal;
-  display: block;
-  padding-top: 4px;
-} */
-
-
-
-/*---------------------------------------
-  Skill section              
------------------------------------------*/
-/* 
-#skill {
-  border-top: 1px solid #f0f0f0;
-  padding-top: 80px;
-  padding-bottom: 60px;
-}
-
-.skill-thumb strong,
-.skill-thumb span {
-  color: #575757;
-  font-size: 16px;
-  padding-bottom: 8px;
-  display: inline-block;
-}
-
-.skill-thumb .progress {
-  background: #ffffff;
-  border-radius: 5px;
-  box-shadow: none;
-  height: 4px;
-}
-
-.skill-thumb .progress-bar-primary {
-  background: #3d3d3f;
-} */
-
-
-
-/*---------------------------------------
-  Work section              
------------------------------------------*/
-/* 
-#work .work-thumb {
-  border-radius: 5px;
-  margin-bottom: 15px;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
-#work .work-thumb:hover {
-  background: #ffffff;
-  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
-  top: -5px;
-}
-
-#work .work-thumb img {
-  border-radius: 5px;
-} */
 
 /*----------------------------------------
   Education section
