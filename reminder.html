@@ -31,16 +31,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#nips_details">
-                        <strong id="nips">1</strong> paper(s) of NeurIPS 2019.
+                        <strong id="nips_total"></strong> paper(s) of NeurIPS 2019
                     </a>
                 </div>
                 <div id="nips_details" class="panel-collapse collapse">
                     <div class="panel-body">
                         <h4>Graph Neural Networks</h4>
                         <ul>
-                            <li>
-                                <p><strong>Diffusion Improves Graph Learning</strong><br>Johannes Klicpera, Stefan Weißenberger, Stephan Günnemann</p>
-                            </li>
+                            <li><p><strong id="nips_paper">Diffusion Improves Graph Learning</strong><br>Johannes Klicpera, Stefan Weißenberger, Stephan Günnemann</p></li>
                         </ul>
                     </div>
                 </div>
@@ -48,22 +46,19 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#iclr_details">
-                        <strong id="iclr">2</strong> paper(s) of ICLR 2020.
+                        <strong id="iclr_total"></strong> paper(s) of ICLR 2020
                     </a>
                 </div>
                 <div id="iclr_details" class="panel-collapse collapse">
                     <div class="panel-body">
                         <h4>Graph Neural Networks</h4>
                         <ul>
-                            <li>
-                                <p><strong>A Fair Comparison of Graph Neural Networks for Graph Classification</strong><br>Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli</p>
-                            </li>
+                            <li><p><strong id="iclr_paper">A Fair Comparison of Graph Neural Networks for Graph Classification</strong><br>Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli</p></li>
                         </ul>
                         <h4>Graph Matching</h4>
                         <ul>
-                            <li>
-                                <p><strong>Learning deep graph matching with channel-independent embedding and Hungarian attention</strong><br>Tianshu Yu, Runzhong Wang, Junchi Yan, Baoxin Li</p>
-                            </li>
+                            <li><p><strong id="iclr_paper">Learning deep graph matching with channel-independent embedding and Hungarian attention</strong><br>Tianshu Yu, Runzhong Wang, Junchi Yan, Baoxin Li</p></li>
+                            <li><p><strong id="iclr_paper">Deep Graph Matching Consensus</strong><br>Matthias Fey, Jan E. Lenssen, Christopher Morris, Jonathan Masci, Nils M. Kriege</p></li>
                         </ul>
                     </div>
                 </div>
@@ -71,7 +66,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#icml_details">
-                        <strong id="icml">0</strong> paper(s) of ICML 2020.
+                        <strong id="icml_total"></strong> paper(s) of ICML 2020
                     </a>
                 </div>
                 <div id="icml_details" class="panel-collapse collapse">
@@ -79,22 +74,24 @@
                 </div>
             </div>
         <li>
-            <strong>
-                <script language="JavaScript">
-                    var nips = Number($("#nips").text());
-                    var iclr = Number($("#iclr").text());
-                    var icml = Number($("#icml").text());
-                    document.write(nips + iclr + icml);
-                </script>
-            </strong> papers have been read, <strong>
-                <script language="JavaScript">
-                    var nips = Number($("#nips").text());
-                    var iclr = Number($("#iclr").text());
-                    var icml = Number($("#icml").text());
-                    document.write(100 - nips - iclr - icml);
-                </script>
-            </strong> more to achieve a little goal!
+            <strong id="read_total"></strong> papers have been read, <strong id="read_left"></strong> more to achieve a little goal!
         </li>
     </ul>
+    <script language="JavaScript">
+        function count_paper(idx) {
+            return $(idx).length;
+        }
+        $(document).ready(function(){
+            var nips_cnt = count_paper('strong#nips_paper');
+            var iclr_cnt = count_paper('strong#iclr_paper');
+            var icml_cnt = count_paper('strong#icml_paper');
+            var read_tot = nips_cnt + iclr_cnt + icml_cnt;
+            $('#nips_total').text(nips_cnt);
+            $('#iclr_total').text(iclr_cnt);
+            $('#icml_total').text(icml_cnt);
+            $('#read_total').text(read_tot);
+            $('#read_left').text(100 - read_tot);
+        });
+    </script>
 </body>
 </html>
