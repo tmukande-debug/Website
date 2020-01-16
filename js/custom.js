@@ -4,7 +4,7 @@
 
         // PRE loader
         $(window).load(function(){
-          $('.preloader').fadeOut(1000); // set duration in brackets    
+          $('.preloader').fadeOut(500); // set duration in brackets    
         });
 
 
@@ -28,7 +28,7 @@
             var $anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $($anchor.attr('href')).offset().top - 49
-            }, 1000);
+            }, 300);
             event.preventDefault();
           });
         });  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reminders</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body style="padding-left: 40px; padding-right: 40px; padding-top: 10px;">
+    <h1>Reminders</h1>
+    <p><a href="index.html">(Back to my homepage)</a></p>
+
+    <h2>SIGKDD 2020 Deadline</h2>
+    <ul>
+        <li>
+            <script language="JavaScript">
+                var urodz= new Date("2/13/2020");
+                var now = new Date();
+                var ile = urodz.getTime() - now.getTime();
+                var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+                document.write(+dni)
+            </script> days left.
+        </li>
+    </ul>
+
+    <h2>Paper Reading</h2>
+    <ul>
+        <li>Finished Reading</li>
+            <br>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#nips_details">
+                        <strong id="nips">1</strong> paper(s) of NeurIPS 2019.
+                    </a>
+                </div>
+                <div id="nips_details" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Graph Neural Networks</h4>
+                        <ul>
+                            <li>
+                                <p><strong>Diffusion Improves Graph Learning</strong><br>Johannes Klicpera, Stefan Weißenberger, Stephan Günnemann</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#iclr_details">
+                        <strong id="iclr">2</strong> paper(s) of ICLR 2020.
+                    </a>
+                </div>
+                <div id="iclr_details" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Graph Neural Networks</h4>
+                        <ul>
+                            <li>
+                                <p><strong>A Fair Comparison of Graph Neural Networks for Graph Classification</strong><br>Federico Errica, Marco Podda, Davide Bacciu, Alessio Micheli</p>
+                            </li>
+                        </ul>
+                        <h4>Graph Matching</h4>
+                        <ul>
+                            <li>
+                                <p><strong>Learning deep graph matching with channel-independent embedding and Hungarian attention</strong><br>Tianshu Yu, Runzhong Wang, Junchi Yan, Baoxin Li</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#icml_details">
+                        <strong id="icml">0</strong> paper(s) of ICML 2020.
+                    </a>
+                </div>
+                <div id="icml_details" class="panel-collapse collapse">
+                    <div class="panel-body"></div>
+                </div>
+            </div>
+        <li>
+            <strong>
+                <script language="JavaScript">
+                    var nips = Number($("#nips").text());
+                    var iclr = Number($("#iclr").text());
+                    var icml = Number($("#icml").text());
+                    document.write(nips + iclr + icml);
+                </script>
+            </strong> papers have been read, <strong>
+                <script language="JavaScript">
+                    var nips = Number($("#nips").text());
+                    var iclr = Number($("#iclr").text());
+                    var icml = Number($("#icml").text());
+                    document.write(100 - nips - iclr - icml);
+                </script>
+            </strong> more to achieve a little goal!
+        </li>
+    </ul>
+</body>
+</html>
