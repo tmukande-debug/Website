@@ -79,7 +79,7 @@
                 </div>
             </div>
         <li>
-            <strong id="read_total"></strong> papers have been read, <strong id="read_left"></strong> more to achieve a little goal!
+            <strong id="read_total"></strong> papers have been read, <strong id="read_left"></strong> more (<strong id="read_per_day"></strong> per day) to achieve a little goal!
         </li>
     </ul>
     <script language="JavaScript">
@@ -95,7 +95,14 @@
             $('#iclr_total').text(iclr_cnt);
             $('#icml_total').text(icml_cnt);
             $('#read_total').text(read_tot);
-            $('#read_left').text(50 - read_tot);
+            var left = 100 - read_tot;
+            $('#read_left').text(left);
+            var urodz= new Date("8/31/2020");
+            var now = new Date();
+            var ile = urodz.getTime() - now.getTime();
+            var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+            var pday = left / dni
+            $('#read_per_day').text(pday.toFixed(2));
         });
     </script>
 </body>
