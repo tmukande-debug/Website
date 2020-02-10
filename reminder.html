@@ -11,17 +11,20 @@
     <h1>Reminders</h1>
     <p><a href="index.html">(Back to my homepage)</a></p>
 
-    <h2>SIGKDD 2020 Deadline</h2>
+    <h2>Upcoming</h2>
     <ul>
-        <li>
-            <script language="JavaScript">
-                var urodz= new Date("2/13/2020");
-                var now = new Date();
-                var ile = urodz.getTime() - now.getTime();
-                var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-                document.write(+dni)
-            </script> days left.
-        </li>
+        <li><h4>COLING 2020 Submissions Due</h4></li>
+        <ul>
+            <li><strong id="coling_sub"></strong> days left.</li>
+        </ul>
+        <li><h4><a href="https://easychair.org/conferences/overview?a=23991195" target="_blank">SIGIR 2020 Notifications</a></h4></li>
+        <ul>
+            <li><strong id="sigir_not"></strong> days left.</li>
+        </ul>
+        <li><h4>COLING 2020 Notifications</h4></li>
+        <ul>
+            <li><strong id="coling_not"></strong> days left.</li>
+        </ul>
     </ul>
 
     <h2>Paper Reading</h2>
@@ -86,6 +89,15 @@
         function count_paper(idx) {
             return $(idx).length;
         }
+
+        function count_days(ftr) {
+            var urodz= new Date(ftr);
+            var now = new Date();
+            var ile = urodz.getTime() - now.getTime();
+            var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+            return +dni;
+        }
+
         $(document).ready(function(){
             var nips_cnt = count_paper('strong#nips_paper');
             var iclr_cnt = count_paper('strong#iclr_paper');
@@ -97,13 +109,15 @@
             $('#read_total').text(read_tot);
             var left = 100 - read_tot;
             $('#read_left').text(left);
-            var urodz= new Date("8/31/2020");
-            var now = new Date();
-            var ile = urodz.getTime() - now.getTime();
-            var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-            var pday = left / dni
+            var pday = left / count_days("8/31/2020");
             $('#read_per_day').text(pday.toFixed(2));
         });
+
+        $(document).ready(function(){
+            $("#coling_sub").text(count_days("4/8/2020"));
+            $("#sigir_not").text(count_days("4/22/2020"));
+            $("#coling_not").text(count_days("6/10/2020"));
+        })
     </script>
 </body>
 </html>
