@@ -1,309 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <meta charset="utf-8" />
 
-<meta charset="UTF-8">
+  <title>Yupeng Hou's Homepage 侯宇蓬</title>
 
-<title>Yupeng Hou's Homepage 侯宇蓬</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="description" content="Yupeng Hou's Homepage">
-<meta name="keywords" content="Yupeng Hou, Renmin University of China, RUC, Computer Science, CV, Homepage">
-<meta name="author" content="Yupeng Hou">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<!-- Main css -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/fontawesome/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
+  <!-- jQuery and JS bundle w/ Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-<!-- PRE LOADER -->
-<div class="preloader">
-     <div class="spinner">
-          <span class="spinner-rotate"></span>
-     </div>
-</div>
-
-<!-- NAVIGATION SECTION -->
-<div class="navbar custom-navbar navbar-fixed-top" role="navigation">
-     <div class="container">
-
-        <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon icon-bar"></span>
-                <span class="icon icon-bar"></span>
-                <span class="icon icon-bar"></span>
-            </button>
-            <!-- lOGO TEXT HERE -->
-            <a href="index.html" class="navbar-brand">Yupeng Hou 侯宇蓬</a>
+<body>
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-10 offset-md-2">
+        <div class="row" id="intro">
+          <div class="col-md-3">
+            <img src="assets/avatar.jpg" class="img-fluid rounded">
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <h3>Yupeng Hou 侯宇蓬</h3>
+            <br>
+            <p>houyupeng AT ruc.edu.cn</p>
+            <p>
+              [<a href="https://github.com/hyp1231" target="_blank">GitHub</a>]
+              [<a href="https://www.zhihu.com/people/kong-zhong-32" target="_blank">Zhihu</a>]
+            </p>
+          </div>
         </div>
-
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#publication">Publication</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#award">Award</a></li>
-                <li><a href="#others">Others</a></li>
+        <div class="row" id="about">
+          <div class="col-md-10">
+            <p>I am currently a first year graduate student from <a href="http://ai.ruc.edu.cn/" target="_blank">Gaoling School of Artificial Intelligence</a>, <a href="https://www.ruc.edu.cn/" target="_blank">Renmin University of China</a>.</p>
+            <p>I'm fortunate to be advised by Prof. <a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&hl=en&oi=ao" target="_blank">Wayne Xin Zhao</a>. Visit <a href="http://aibox.ruc.edu.cn/" target="_blank">AI Box</a> for details about our research group. I also work closely with Dr. <a href="http://xu-chen.com/" target="_blank">Xu Chen</a>. My major research interest lies on Deep Learning on Graph.</p>
+          </div>
+        </div>
+        <div class="row" id="pub">
+          <div class="col-md-10">
+            <h4>Publication</h4>
+            <h5>Preprints</h5>
+            <ul>
+              <li>
+                <p><strong>RecBole: Towards a Unified, Comprehensive and Efficient Framework for Recommendation Algorithms</strong></p>
+                <p>Wayne Xin Zhao, Shanlei Mu*, <strong>Yupeng Hou*</strong>, Zihan Lin, Kaiyuan Li, Yushuo Chen, Yujie Lu, Hui Wang, Changxin Tian, Xingyu Pan, Yingqian Min, Zhichao Feng, Xinyan Fan, Xu Chen, Pengfei Wang, Wendi Ji, Yaliang Li, Xiaoling Wang and Ji-Rong Wen (*equal contribution)</p>
+                <p>
+                  [<a href="#" target="_blank">pdf</a>]
+                  [<a href="assets/bib/zhao2020recbole.bib" download="zhao2020recbole.bib">bib</a>]
+                  [<a href="https://recbole.io" target="_blank">HomePage</a>]
+                  [<a href="https://github.com/RUCAIBox/RecBole" target="_blank">GitHub</a>]
+                  [<a href="https://github.com/RUCAIBox/RecDatasets" target="_blank">datasets</a>]
+                </p>
+              </li>
             </ul>
+            <h5>2020</h5>
+            <ul>
+              <li>
+                <p><strong>Learning to Match Jobs with Resumes from Sparse Interaction Data using Multi-View Co-Teaching Network</strong></p>
+                <p>Shuqing Bian, Xu Chen, Wayne Xin Zhao, Kun Zhou, <strong>Yupeng Hou</strong>, Yang Song, Tao Zhang, Ji-Rong Wen</p>
+                <p>
+                  CIKM (CCF-B)
+                  [<a href="https://dl.acm.org/doi/abs/10.1145/3340531.3411929" target="_blank">pdf</a>]
+                  [<a href="assets/bib/bian2020learning.bib" download="bian2020learning.bib">bib</a>]
+                </p>
+              </li>
+              <li>
+                <p><strong>Learning Semantic Representations from Directed Social Links to Tag Microblog Users at Scale</strong></p>
+                <p>Wayne Xin Zhao, <strong>Yupeng Hou*</strong>, Junhua Chen*, Jonathan Zhu, Jing Yin, Hanting Su, Ji-Rong Wen (*equal contribution)</p>
+                <p>
+                    TOIS (CCF-A)
+                    [<a href="https://dl.acm.org/doi/abs/10.1145/3377550" target="_blank">pdf</a>]
+                    [<a href="files/bib/zhao2020learning.bib" download="zhao2020learning.bib">bib</a>]
+                    [<a href="https://github.com/RUCAIBox/weibotagging" target="_blank">dataset & code</a>]
+                    [<a href="http://aibox.ruc.edu.cn/weibo_tagging/" target="_blank">demo</a>]
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-
-     </div>
-</div>
-
-<!-- ABOUT SECTION -->
-<section id="about">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 col-sm-3">
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-10 col-sm-12">
-                            <img src="images/avatar.jpg" class="img-responsive img-circle" alt="about image">
-                            <h3>&nbsp;&nbsp;Yupeng Hou</h3>
-                        </div>
-                    </div>
-                    <div class="row " style="margin-top: 10%;">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <h4><i class="fas fa-envelope"></i></h4>
-                                </div>
-                                <div class="col-md-10">
-                                    <h4>houyupeng AT ruc.edu.cn</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <h4><i class="fab fa-github"></i></h4>
-                                </div>
-                                <div class="col-md-10">
-                                    <h4><a href="https://github.com/hyp1231" target="_blank">hyp1231</a></h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <h4><i class="fab fa-zhihu"></i></h4>
-                                </div>
-                                <div class="col-md-10">
-                                    <h4><a href="https://www.zhihu.com/people/kong-zhong-32/activities" target="_blank">hyp1231</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-offset-1 col-md-8 col-sm-9">
-                    <h1>Hi,</h1>
-                    <h3>I am currently a Senior student from <a href="http://info.ruc.edu.cn/" target="_blank">School of Information</a>, <a href="https://www.ruc.edu.cn/" target="_blank">Renmin University of China (RUC)</a>, and expected to enter graduate school of <a href="http://ai.ruc.edu.cn/" target="_blank">Gaoling School of Artificial Intelligence (GSAI)</a> in September 2020.</h3>
-                    <h3>I'm fortunate to be advised by Prof. <a href="http://playbigdata.ruc.edu.cn/batmanfly/" target="_blank">Wayne Xin Zhao</a> and Dr. <a href="http://xu-chen.com/" target="_blank">Xu Chen</a>, and you can visit my group's homepage - <a href="http://aibox.ruc.edu.cn/" target="_blank">AI Box</a>.
-                    My major research interest lies on Deep Learning on Graph.</h3>
-                </div>
-
-            </div>
+        <div class="row" id="edu">
+          <div class="col-md-10">
+            <h4>Education</h4>
+            <ul>
+              <li>
+                <strong>M.E., Renmin University of China</strong>
+                <p>
+                  2020 - present,
+                  <a href="http://ai.ruc.edu.cn/" target="_blank">Gaoling School of Artificial Intelligence</a>,
+                  Advisor: <a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&hl=en&oi=ao" target="_blank">Wayne Xin Zhao</a>
+                </p>
+              </li>
+              <li>
+                <strong>B.E., Renmin University of China</strong>
+                <p>
+                  2016 - 2020,
+                  <a href="http://info.ruc.edu.cn/" target="_blank">School of Information</a>
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
-   </section>
-
-<!-- PUBLICATION SECTION -->
-<section id="publication">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class=" section-title">
-                    <h2>Publication</h2>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <h3>2020</h3>
+        <div class="row" id="exp">
+          <div class="col-md-10">
+            <h4>Experience</h4>
+            <ul>
+              <li>
+                <strong>Research Intern, Boss Zhipin</strong>
+                <p>
+                  09/2019 - present,
+                  NLP Center, with Yang Song
+                </p>
+              </li>
+              <li>
+                <strong>Teaching Assistant, Renmin Univ. of China</strong>
                 <ul>
-                    <li>
-                        <p><strong>Learning to Match Jobs with Resumes from Sparse Interaction Data using Multi-View Co-Teaching Network</strong></p>
-                        <p>Shuqing Bian, Xu Chen, Wayne Xin Zhao, Kun Zhou, <strong>Yupeng Hou</strong>, Yang Song, Tao Zhang, Ji-Rong Wen</p>
-                        <p>
-                            CIKM (CCF-B)
-                            [<a href="#" style="color: gray;">pdf</a>]
-                            [<a href="#" style="color: gray;">bib</a>]
-                        </p>
-                    </li>
-                    <li>
-                        <p><strong>Semantic Representations from Directed Social Links to Tag Microblog Users at Scale</strong></p>
-                        <p>Wayne Xin Zhao, <strong>Yupeng Hou*</strong>, Junhua Chen*, Jonathan Zhu, Jing Yin, Hanting Su, Ji-Rong Wen (*equal contribution)</p>
-                        <p>
-                            TOIS (CCF-A)
-                            [<a href="https://dl.acm.org/doi/abs/10.1145/3377550" target="_blank">pdf</a>]
-                            [<a href="files/bib/zhao2020learning.bib" download="zhao2020learning.bib">bib</a>]
-                            [<a href="https://github.com/RUCAIBox/weibotagging" target="_blank">dataset & code</a>]
-                            [<a href="http://aibox.ruc.edu.cn/weibo_tagging/" target="_blank">demo</a>]
-                        </p>
-                    </li>
+                  <li>2020 Summer, Programming Training, with Wayne Xin Zhao <a href="https://github.com/Menci/SummerProgrammingPractice2020" target="_blank">[Project Page]</a></li>
+                  <li>2018-2019 Fall, Introduction to Computer system, with Yunpeng Chai</li>
+                  <li>2018 Summer, Programming Training, with Feng Zhang</li>
+                  <li>2017-2018 Fall, Advanced Programming, with Wayne Xin Zhao</li>
                 </ul>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- EDUCATION SECTION -->
-<section id="education">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-12">
-                <div class=" section-title">
-                    <h2>Education</h2>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <div>
-                    <ul>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-12">
-                                <li><strong style="font-size: 1.5em;">B.E., <a href="https://www.ruc.edu.cn/" target="_blank">Renmin University of China</a></strong>
-                                    <ul>
-                                        <li>09 / 2016 - present</li>
-                                        <li><a href="http://info.ruc.edu.cn/" target="_blank">School of Information</a></li>
-                                        <li>Advisor: <a href="http://playbigdata.ruc.edu.cn/batmanfly/" target="_blank">Wayne Xin Zhao（赵鑫）</a></li>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="col-md-4 col-sm-12">
-                                <img src="images/edu/ruc-logo.jpg" style="width: 50%;">
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="row" id="award">
+          <div class="col-md-10">
+            <h4>Award</h4>
+            <ul>
+              <li><strong>Star of the Graduates</strong> (10 of the graduates), Renmin Univ. of China, 2020 <a href="assets/award/star_of_the_graduates-2020.pdf" target="_blank">[pdf]</a></li>
+              <li><strong>Outstanding Graduate</strong>, Beijing, 2020 <a href="assets/award/outstanding_graduate-2020.pdf" target="_blank">[pdf]</a></li>
+              <li><strong>Silver Medal</strong>, The ICPC Asia-East Continent Final, Xi'an Site, 2018 <a href="assets/award/icpc-ecfinal-2018.pdf" target="_blank">[pdf]</a></li>
+              <li><strong>Silver Medal</strong>, CCF Collegiate Computer Systems & Programming contest, 2018 <a href="assets/award/ccsp-2018.pdf" target="_blank">[pdf]</a></li>
+              <li><strong>Xin Shan Scholarship</strong> (top 8%), Renmin Univ. of China, 2018 <a href="assets/award/xinshan-scholarship-2018.pdf" target="_blank">[pdf]</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- EXPERIENCE SECTION -->
-<section id="experience">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-12">
-                <div class=" section-title">
-                    <h2>Experience</h2>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <div>
-                    <ul>
-                        <div class="row">
-                            <div class="col-md-8 col-sm-12">
-                                <li><strong style="font-size: 1.5em;">Research Intern, Boss Zhipin</strong>
-                                    <ul>
-                                        <li>09 / 2019 - present</li>
-                                        <li>NLP Center, with Yang Song（宋洋）</li>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class="col-md-4 col-sm-12">
-                                <img src="images/exp/boss-zhipin-logo.jpg" style="width: 100%">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <li><strong style="font-size: 1.5em;">Teaching Assistant</strong>
-                                    <ul>
-                                        <li>2020 Summer, Programming Training, with <a href="http://playbigdata.ruc.edu.cn/batmanfly/" target="_blank">Wayne Xin Zhao（赵鑫）</a> <a href="https://github.com/Menci/SummerProgrammingPractice2020" target="_blank">[Project Page]</a></li>
-                                        <li>2018-2019 Fall, Introduction to Computer system, with <a href="http://info.ruc.edu.cn/academic_professor.php?teacher_id=42" target="_blank">Yunpeng Chai（柴云鹏）</a></li>
-                                        <li>2018 Summer, Programming Training, with <a href="http://iir.ruc.edu.cn/~zhangf/" target="_blank">Feng Zhang（张峰）</a></li>
-                                        <li>2017-2018 Fall, Advanced Programming, with <a href="http://playbigdata.ruc.edu.cn/batmanfly/" target="_blank">Wayne Xin Zhao（赵鑫）</a></li>
-                                    </ul>
-                                </li>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="row" id="misc">
+          <div class="col-md-10">
+            <h4>Misc</h4>
+            <ul>
+              <li>I am passionate about algorithmic competition (E.g ACM-ICPC etc.) and have contributed algorithm problems to <a href="http://www.noi.cn/" target="_blank">NOIP, CSP-J/S</a> for several years. Click <a href="algo-prob.html" target="_blank">[here]</a> to check out all the problems (already public) I have contributed.</li>
+              <li>Falling in love with Guanyue for 
+                <script language="JavaScript">
+                  var urodz= new Date("12/2/2016");
+                  var now = new Date();
+                  var ile = now.getTime() - urodz.getTime();
+                  var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+                  document.write(+dni)
+                </script> days.&nbsp;&nbsp;❤️
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-
-<!-- AWARD SECTION -->
-<section id="award">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-12">
-                <div class=" section-title">
-                    <h2>Award</h2>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <div>
-                    <ul>
-                        <li style="font-size: 1.2em;"><strong>Outstanding Graduate</strong>, Beijing, 2020 <a href="files/award/outstanding_graduate-2020.pdf" style="color: crimson" target="_blank">[pdf]</a></li>
-                        <li style="font-size: 1.2em;"><strong>Silver Medal</strong>, The ICPC Asia-East Continent Final, Xi'an Site, 2018 <a href="files/award/icpc-ecfinal-2018.pdf" style="color: crimson" target="_blank">[pdf]</a></li>
-                        <li style="font-size: 1.2em;"><strong>Silver Medal</strong>, CCF Collegiate Computer Systems & Programming contest, 2018 <a href="files/award/ccsp-2018.pdf" style="color: crimson" target="_blank">[pdf]</a></li>
-                        <li style="font-size: 1.2em;"><strong>Xin Shan Scholarship (top 8%)</strong>, Renmin University of China, 2018 <a href="files/award/xinshan-scholarship-2018.pdf" style="color: crimson" target="_blank">[pdf]</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+  </div>
+  <div class="container" id="tail">
+    <div class="row">
+      <div class="col-md-12">
+        <br><br><br>
+        <span id="busuanzi_container_site_pv">Total number of visitors: <span id="busuanzi_value_site_pv"></span></span>
+        <p>© Latest Updated: Nov 3, 2020</p>
+        <br>
+      </div>
     </div>
-</section>
-
-<!-- OTHERS SECTION -->
-<section id="others">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-12">
-                <div class=" section-title">
-                    <h2>Others</h2>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <div>
-                    <ul>
-                        <li style="font-size: 1.2em;">I am passionate about algorithmic competition (E.g ACM-ICPC etc.) and have contributed algorithm problems to <a href="http://www.noi.cn/" target="_blank">NOIP, CSP-J/S</a> for several years. Click <a href="algo-problem.html" target="_blank">[here]</a> to check out all the problems (already public) I have contributed.</li>
-                        <li style="font-size: 1.2em;">Falling in love with Guanyue for 
-                            <script language="JavaScript">
-                                var urodz= new Date("12/2/2016");
-                                var now = new Date();
-                                var ile = now.getTime() - urodz.getTime();
-                                var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
-                                document.write(+dni)
-                            </script> days.&nbsp;&nbsp;<i class="fa fa-heart" style="color: crimson;"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- TAIL SECTION -->
-<section id="tail">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <br><br><br>
-                <span id="busuanzi_container_site_pv">Total number of visitors: <span id="busuanzi_value_site_pv"></span></span>
-                <br>
-                © Latest Updated: July 20, 2020
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- SCRIPTS -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-
+</div>
 </body>
 </html>
