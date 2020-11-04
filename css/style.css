@@ -17,3 +17,10 @@ body {
 #tail div {
   text-align: center;
 }
+
+.split{
+  background-image: linear-gradient(to right, #307Df6, white, white);
+  border: 0;
+  height: 2px;
+  margin-bottom: 10px
+}
