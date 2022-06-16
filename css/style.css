@@ -7,11 +7,16 @@ body {
 }
 
 #pub p {
-  margin-bottom: 1%;
+  margin-bottom: 0.2%;
+  font-size: smaller;
 }
 
 #pub h5 {
   margin-top: 4%;
+}
+
+#pub li {
+  margin-bottom: 2%;
 }
 
 #tail div {
